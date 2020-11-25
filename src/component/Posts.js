@@ -23,16 +23,14 @@ class Posts extends Component{
         return(
             <div>
                 <Mui.Container Fixed>
-                <center><hr/>
+                <center>
                 <Mui.ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
                     <Mui.Button href="/">Users</Mui.Button>
                     <Mui.Button href="/Posts">Posts</Mui.Button>
                     <Mui.Button href="/Comments">Comments</Mui.Button>
                 </Mui.ButtonGroup>
-                </center><br/><hr/>
-                <center>
-                <h1>DATA JSON POSTS</h1><br/><hr/>
                 </center><br/>
+                <h2>Data Json Posts</h2><br/><hr/>
                 <table border="1">
                     <thead>
                         <tr>

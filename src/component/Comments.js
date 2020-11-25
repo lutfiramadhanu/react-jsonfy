@@ -23,17 +23,14 @@ class Comments extends Component{
         return(
             <div>
                 <Mui.Container Fixed>
-                <center><hr/>
+                <center>
                 <Mui.ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
                     <Mui.Button href="/">Users</Mui.Button>
                     <Mui.Button href="/Posts">Posts</Mui.Button>
                     <Mui.Button href="/Comments">Comments</Mui.Button>
                 </Mui.ButtonGroup>
-                </center><br/><hr/>
-                <center>
-                <h2>DATA JSON COMMENTS</h2><br/><hr/>
                 </center><br/>
-                <center>
+                <h2>Data Json Posts</h2><br/><hr/>
                 <table border="1">
                     <thead>
                         <tr>
@@ -58,7 +55,6 @@ class Comments extends Component{
                     </thead>
                     )}
                 </table>
-                </center>
                 </Mui.Container>
             </div>
         )
