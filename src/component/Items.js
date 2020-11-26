@@ -10,7 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 
-class Users extends Component{
+class Items extends Component{
     constructor(props) {
         super(props);
     
@@ -20,7 +20,7 @@ class Users extends Component{
       }
     
       componentDidMount() {
-        const apiUrl = 'https://jsonfy.com/users';
+        const apiUrl = 'https://jsonfy.com/items';
         fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => this.setState({ data: data }));
@@ -55,7 +55,7 @@ class Users extends Component{
                 <Mui.Container Fixed>
                     <Mui.Paper class="card-panel indigo">
                 <center>
-                <h2>Data Json Users</h2>
+                <h2>Data Json Items</h2>
                 </center>
                 </Mui.Paper><br/>
                 <TableContainer component={Paper}>
@@ -64,15 +64,16 @@ class Users extends Component{
                         <TableRow class="card-panel indigo">
                             <TableCell align="left">id</TableCell>
                             <TableCell align="left">name</TableCell>
-                            <TableCell align="left">username</TableCell>
-                            <TableCell align="left">email</TableCell>
-                            <TableCell align="left">password</TableCell>
-                            <TableCell align="left">age</TableCell>
-                            <TableCell align="left">website</TableCell>
-                            <TableCell align="left">phone</TableCell>
+                            <TableCell align="left">description</TableCell>
+                            <TableCell align="left">wholesale_price</TableCell>
+                            <TableCell align="left">price</TableCell>
+                            <TableCell align="left">photo_url</TableCell>
+                            <TableCell align="left">stock</TableCell>
+                            <TableCell align="left">sales</TableCell>
+                            <TableCell align="left">active</TableCell>
                             <TableCell align="left">date_add</TableCell>
                             <TableCell align="left">date_upd</TableCell>
-                            <TableCell align="left">password_md5</TableCell>
+                            <TableCell align="left">bra_ite_fk</TableCell>
                         </TableRow>
                         </TableHead>
                         <TableBody>
@@ -81,17 +82,17 @@ class Users extends Component{
                             <TableCell component="th" scope="row">
                                 {todo.id}
                             </TableCell>
-                            <TableCell align="left">{todo.id}</TableCell>
                             <TableCell align="left">{todo.name}</TableCell>
-                            <TableCell align="left">{todo.username}</TableCell>
-                            <TableCell align="left">{todo.email}</TableCell>
-                            <TableCell align="left">{todo.password}</TableCell>
-                            <TableCell align="left">{todo.age}</TableCell>
-                            <TableCell align="left">{todo.website}</TableCell>
-                            <TableCell align="left">{todo.phone}</TableCell>
+                            <TableCell align="left">{todo.description}</TableCell>
+                            <TableCell align="left">{todo.wholesale_price}</TableCell>
+                            <TableCell align="left">{todo.price}</TableCell>
+                            <TableCell align="left">{todo.photo_url}</TableCell>
+                            <TableCell align="left">{todo.stock}</TableCell>
+                            <TableCell align="left">{todo.sales}</TableCell>
+                            <TableCell align="left">{todo.active}</TableCell>
                             <TableCell align="left">{todo.date_add}</TableCell>
                             <TableCell align="left">{todo.date_upd}</TableCell>
-                            <TableCell align="left">{todo.password_md5}</TableCell>
+                            <TableCell align="left">{todo.bra_ite_fk}</TableCell>
                             </TableRow>
                         )}
                         </TableBody>
@@ -102,5 +103,5 @@ class Users extends Component{
         )
     }
 }
-    
-export default Users;
+            
+export default Items;

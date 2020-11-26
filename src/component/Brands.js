@@ -10,7 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 
-class Users extends Component{
+class Brands extends Component{
     constructor(props) {
         super(props);
     
@@ -20,7 +20,7 @@ class Users extends Component{
       }
     
       componentDidMount() {
-        const apiUrl = 'https://jsonfy.com/users';
+        const apiUrl = 'https://jsonfy.com/brands';
         fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => this.setState({ data: data }));
@@ -31,10 +31,10 @@ class Users extends Component{
 
         return(
             <div>
-                <nav>
+              <nav>
                     <Mui.AppBar>
                         <Mui.Toolbar>
-                        <a href="#!" class="brand-logo right">jsonfy</a>
+                        <a href="#!" class="brand-logo right">Jsofyn </a>
                             <Mui.Typography>
                     <div class="nav-wrapper red accent-4">
                     <ul class="left hide-on-med-and-down">
@@ -55,7 +55,7 @@ class Users extends Component{
                 <Mui.Container Fixed>
                     <Mui.Paper class="card-panel indigo">
                 <center>
-                <h2>Data Json Users</h2>
+                <h2>Data Json Brands</h2>
                 </center>
                 </Mui.Paper><br/>
                 <TableContainer component={Paper}>
@@ -64,15 +64,7 @@ class Users extends Component{
                         <TableRow class="card-panel indigo">
                             <TableCell align="left">id</TableCell>
                             <TableCell align="left">name</TableCell>
-                            <TableCell align="left">username</TableCell>
-                            <TableCell align="left">email</TableCell>
-                            <TableCell align="left">password</TableCell>
-                            <TableCell align="left">age</TableCell>
-                            <TableCell align="left">website</TableCell>
-                            <TableCell align="left">phone</TableCell>
-                            <TableCell align="left">date_add</TableCell>
-                            <TableCell align="left">date_upd</TableCell>
-                            <TableCell align="left">password_md5</TableCell>
+                            <TableCell align="left">logo_url</TableCell>
                         </TableRow>
                         </TableHead>
                         <TableBody>
@@ -81,17 +73,8 @@ class Users extends Component{
                             <TableCell component="th" scope="row">
                                 {todo.id}
                             </TableCell>
-                            <TableCell align="left">{todo.id}</TableCell>
                             <TableCell align="left">{todo.name}</TableCell>
-                            <TableCell align="left">{todo.username}</TableCell>
-                            <TableCell align="left">{todo.email}</TableCell>
-                            <TableCell align="left">{todo.password}</TableCell>
-                            <TableCell align="left">{todo.age}</TableCell>
-                            <TableCell align="left">{todo.website}</TableCell>
-                            <TableCell align="left">{todo.phone}</TableCell>
-                            <TableCell align="left">{todo.date_add}</TableCell>
-                            <TableCell align="left">{todo.date_upd}</TableCell>
-                            <TableCell align="left">{todo.password_md5}</TableCell>
+                            <TableCell align="left">{todo.logo_url}</TableCell>
                             </TableRow>
                         )}
                         </TableBody>
@@ -102,5 +85,5 @@ class Users extends Component{
         )
     }
 }
-    
-export default Users;
+            
+export default Brands;

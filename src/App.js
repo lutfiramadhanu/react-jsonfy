@@ -1,7 +1,13 @@
 import { BrowserRouter, Switch, Link } from 'react-router-dom';
 import Posts from './component/Posts';
 import Comments from './component/Comments'
-import Users from './component/Users';
+import Users from './component/Users'
+import Albums from './component/Albums'
+import Photos from './component/Photos'
+import Categories from './component/Categories'
+import Brands from './component/Brands'
+import Items from './component/Items'
+
 
 
 function App() {
@@ -11,6 +17,11 @@ function App() {
           <Link path="/" exact component={Users}/>
           <Link path="/Posts" component={Posts}/>
           <Link path="/Comments" component={Comments}/>
+          <Link path="/Albums" component={Albums}/>
+          <Link path="/Photos" component={Photos}/>
+          <Link path="/Categories" component={Categories}/>
+          <Link path="/Brands" component={Brands}/>
+          <Link path="/Items" component={Items}/>
       </Switch>
    </BrowserRouter>
   );
